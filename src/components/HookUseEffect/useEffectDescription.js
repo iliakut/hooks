@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import TestClassComponent from "./testClassComponent";
 import TestFuncComponent from "./testFuncComponent";
 import ExampleNotification from "./exampleNotification";
+import ExampleLoadData from "./exampleLoadData";
 
 const UseEffectDescription = () => {
   const [value, setValue] = useState(0);
@@ -21,6 +22,7 @@ const UseEffectDescription = () => {
           </div>
         : null
       }
+      <ExampleLoadData id={value}/>
     </React.Fragment>
   );
 };
