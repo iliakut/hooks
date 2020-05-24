@@ -1,25 +1,29 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 
 const ExampleLoadData = ({id}) => {
+  const [name, setName] = useState(null);
+  const controller = new AbortController();
+
   const loadData = async (id) => {
-    const resp = await fetch(
-      `https://en.wikipedia.org/w/api.php?action=query&prop=info&pageids=${59}&inprop=url&format=json`, {
-        headers: {
-          "Content-Type": "application/json;charset=UTF-8"
-        }
-      }
-      );
-    return await resp.json();
+    const resp = await fetch(`https://swapi.dev/api/planets/${id}`, {
+      signal: controller.signal
+    });
+    const data = await resp.json();
+    setName(data.name)
   };
 
-  useEffect(  () => {
-    loadData(id).then((data) => {
-      console.log(data);
-    })
+  useEffect(   () => {
+    loadData(id);
+
+    return () => {
+      controller.abort();
+    }
   }, [id]);
 
   return (
-    <div>123</div>
+    <div>
+      {id} - {name}
+    </div>
   );
 };
 

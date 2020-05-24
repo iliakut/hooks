@@ -5,7 +5,7 @@ import ExampleNotification from "./exampleNotification";
 import ExampleLoadData from "./exampleLoadData";
 
 const UseEffectDescription = () => {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(1);
   const [visible, toggleVisible] = useState(true);
 
   return (
