@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import TestClassComponent from "./testClassComponent";
 import TestFuncComponent from "./testFuncComponent";
+import ExampleNotification from "./exampleNotification";
 
 const UseEffectDescription = () => {
   const [value, setValue] = useState(0);
@@ -16,6 +17,7 @@ const UseEffectDescription = () => {
         ? <div>
             <TestClassComponent test={value}/>
             <TestFuncComponent test={value}/>
+            <ExampleNotification/>
           </div>
         : null
       }
