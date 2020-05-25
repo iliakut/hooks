@@ -3,6 +3,12 @@ import React, {useState} from "react";
 const HookSwitcher = () => {
   const [color, setColor] = useState('white');
   const [fontSize, setFontSize] = useState(14);
+  /*
+  * хук useState создает стейт в функциональном компоненте
+  * const [color, setColor] = useState('white');
+  * первый параметр color - стейт
+  * второй параметр setColor - функция для установки
+  */
 
   return (
     <div style={{
