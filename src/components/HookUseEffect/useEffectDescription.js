@@ -3,8 +3,9 @@ import TestClassComponent from "./testClassComponent";
 import TestFuncComponent from "./testFuncComponent";
 import ExampleNotification from "./exampleNotification";
 import ExampleLoadData from "./exampleLoadData";
+import HookCustomDescription from "../HookCustom/hookCustomDescription";
 
-const UseEffectDescription = () => {
+const UseEffectDescription = ({set}) => {
   const [value, setValue] = useState(1);
   const [visible, toggleVisible] = useState(true);
 
@@ -23,6 +24,8 @@ const UseEffectDescription = () => {
         : null
       }
       <ExampleLoadData id={value}/>
+
+      <HookCustomDescription id={value}/>
     </React.Fragment>
   );
 };
