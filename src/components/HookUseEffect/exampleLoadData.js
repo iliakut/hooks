@@ -12,7 +12,7 @@ const ExampleLoadData = ({id}) => {
   //   setName(data.name)
   // };
 
-  useEffect(   () => {
+  useEffect(() => {
     // loadData(id);
     //
     // return () => {

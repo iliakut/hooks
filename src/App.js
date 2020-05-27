@@ -3,6 +3,7 @@ import HookSwitcher from "./components/HookSwitcher/HookSwitcher";
 import HookUseContext from "./components/HookUseContext/HookUseContext";
 import TestContext from './components/HookUseContext/context'
 import UseEffectDescription from "./components/HookUseEffect/useEffectDescription";
+import UseCallbackUseMemoDescription from "./components/HooksUseCallbackUseMemo/useCallbackUseMemoDescription";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <HookUseContext/>
       </TestContext.Provider>
       <UseEffectDescription/>
+      <UseCallbackUseMemoDescription/>
     </div>
   );
 }
